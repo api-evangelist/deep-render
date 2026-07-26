@@ -1,7 +1,30 @@
 aid: deep-render
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/deep-render.png
 name: Deep Render
-description: Deep Render is a company surfaced as a portfolio company of speedinvest and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Deep Render is an artificial-intelligence company that developed
+  neural-network-based ("learned") video and image compression technology,
+  aiming to replace traditional hand-engineered codecs such as H.264/HEVC/AV1
+  with deep-learning models for higher compression efficiency. Founded as a
+  London-based startup, it was backed by Speedinvest and was surfaced into the
+  API Evangelist network through VC-portfolio discovery. As of this enrichment
+  pass its primary domain, deeprender.ai, issues a blanket HTTP 301 redirect to
+  InterDigital's Video Lab (https://www.interdigital.com/video-lab/), indicating
+  the company and its compression technology have been absorbed into
+  InterDigital. Deep Render publishes no independent developer portal, API,
+  documentation, SDK, or other machine-readable surface for enrichment at this
+  time.
 url: https://raw.githubusercontent.com/api-evangelist/deep-render/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,14 +32,35 @@ x-backed-by:
 - speedinvest
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: acquired
+x-acquired-by: interdigital
+x-enrichment-note: >-
+  deeprender.ai returns HTTP 301 for every probed path (root, /.well-known/security.txt,
+  /llms.txt, /docs, /api) redirecting to www.interdigital.com/video-lab/. No independent
+  Deep Render developer/API surface exists; no API artifacts could be produced. Probed 2026-07-18.
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
+- Artificial Intelligence
+- Machine Learning
+- Video Compression
+- Image Compression
+- Codecs
+- Media
 apis: []
+common:
+- type: Website
+  url: https://www.interdigital.com/video-lab/
+  x-note: deeprender.ai 301-redirects here (InterDigital Video Lab)
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
