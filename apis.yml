@@ -38,7 +38,7 @@ x-enrichment-note: >-
   deeprender.ai returns HTTP 301 for every probed path (root, /.well-known/security.txt,
   /llms.txt, /docs, /api) redirecting to www.interdigital.com/video-lab/. No independent
   Deep Render developer/API surface exists; no API artifacts could be produced. Probed 2026-07-18.
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-18'
 tags:
